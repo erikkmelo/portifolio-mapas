@@ -2,37 +2,58 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Densidade Demográfica</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 60px); /* Ajusta conforme a altura do header */
+        }
+        .map-container {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header style="height: 60px; background: #333; color: white; display: flex; align-items: center; justify-content: center;">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mapas.html">Portifólio - Mapas</a></li>
-                <li><a href="ia.html">Portifólio - IA</a></li>
+            <ul style="display: flex; list-style: none; padding: 0; margin: 0;">
+                <li style="margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li style="margin: 0 15px;"><a href="mapas.html" style="color: white; text-decoration: none;">Portfólio - Mapas</a></li>
+                <li style="margin: 0 15px;"><a href="ia.html" style="color: white; text-decoration: none;">Portfólio - IA</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <h1>Densidade Demográfica</h1>
+        <h1 style="text-align: center;">Densidade Demográfica</h1>
         <div class="map-container">
-            <!-- Insira seu mapa aqui (ex: Leaflet, Google Maps, etc) -->
-            <iframe src="https://erikkmelo.github.io/portifolio-mapas/01-sv-mapa-densidade" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://erikkmelo.github.io/portifolio-mapas/01-sv-mapa-densidade" allowfullscreen loading="lazy"></iframe>
         </div>
         
-        <section class="descricao">
+        <section class="descricao" style="padding: 20px; background: #f4f4f4;">
             <h2>Metodologia</h2>
             <p>Descrição detalhada da metodologia utilizada...</p>
         </section>
     </main>
-
-    <footer>
+    
+    <footer style="text-align: center; padding: 10px; background: #333; color: white;">
         <p>© 2024 Portfólio Geográfico. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
