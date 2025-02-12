@@ -15,7 +15,7 @@
         main {
             display: flex;
             flex-direction: column;
-            height: calc(100vh - 60px); /* Ajusta conforme a altura do header */
+            height: 100vh;
         }
         .map-container {
             flex: 1;
@@ -26,11 +26,14 @@
             width: 100%;
             height: 100%;
             border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
-    <header style="height: 60px; background: #333; color: white; display: flex; align-items: center; justify-content: center;">
+    <header style="height: 60px; background: #333; color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 10;">
         <nav>
             <ul style="display: flex; list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
@@ -41,18 +44,12 @@
     </header>
     
     <main>
-        <h1 style="text-align: center;">Densidade Demográfica</h1>
         <div class="map-container">
             <iframe src="https://erikkmelo.github.io/portifolio-mapas/01-sv-mapa-densidade" allowfullscreen loading="lazy"></iframe>
         </div>
-        
-        <section class="descricao" style="padding: 20px; background: #f4f4f4;">
-            <h2>Metodologia</h2>
-            <p>Descrição detalhada da metodologia utilizada...</p>
-        </section>
     </main>
     
-    <footer style="text-align: center; padding: 10px; background: #333; color: white;">
+    <footer style="text-align: center; padding: 10px; background: #333; color: white; position: relative; z-index: 10;">
         <p>© 2024 Portfólio Geográfico. Todos os direitos reservados.</p>
     </footer>
 </body>
