@@ -38,7 +38,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
     padding: 10px 15px;
     border-radius: 5px;
 }
@@ -69,13 +69,26 @@ main {
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
     cursor: pointer;
     border: 2px solid #A81E1E; /* Bordas vermelhas sutis */
+    color: #3B2C20; /* Mantendo a identidade visual */
 }
 
 .map-card:hover {
     transform: translateY(-5px);
+    color: #A81E1E; /* Mudança de cor no hover para destaque */
+}
+
+.map-card a {
+    color: #A81E1E; /* Vermelho guará para links nos cards */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.map-card a:hover {
+    color: #D93D3D; /* Tom mais vibrante no hover */
 }
 
 .map-card img {
